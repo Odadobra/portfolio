@@ -60,14 +60,45 @@ a{
   background-image: url(../images/02-hero-bg.jpg);
 }
 
-Aside {
-  margin-right: 20px;
-  padding: 20px;
-  clear: both;
-  float: right;
-  width: 20%;
-  height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #2589bd;
+.project-list {
+  display: grid; 
+  min-height: 500px;
+  height: 70vh;
+  grid-template-columns: 70% 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 10px 10px; 
+  grid-template-areas: 
+    "Project1 Project2"
+    "Project1 Project3"
+    "Project1 Project4"; 
 }
 
+.Project1 {
+  grid-area: Project1;
+  background-size: cover;
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+.Project2 {
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
+  grid-area: Project2;
+}
+
+.Project3 {
+  background-size: cover;
+  background-image: url(../images/02-portfolio-3.jpg);
+  grid-area: Project3;
+}
+
+.Project4 {
+  background-size: cover;
+  background-image: url(../images/02-portfolio-4.jpg);
+  grid-area: Project4;
+}
+
+.page-contact {
+  display: inline-block;
+  padding: 10px;
+  background-color: gray;
+}
