@@ -1,10 +1,14 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-color-light: white;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
@@ -38,25 +42,24 @@ header {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  background-color: grey;
+  background-color: rgba(58, 58, 58, 0.445);
+  opacity: 0.8;
+  border: 2px solid black;
+  margin: 3px 3px;
 }
 
 header h1 {
-  color: white;
-}
-
-.me {
-  display: flex;
+  color: var(--text-color-light);
 }
 
 a{
-  color: white;
+  color: var(--text-color-light);
   text-decoration: solid;
 }
 .hero-banner h2 {
   display: inline;
   font-size: 1in;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .hero-banner {
@@ -79,47 +82,63 @@ a{
     "Project1 Project4"; 
 }
 
-.Project1 {
+#Project1 {
   grid-area: Project1;
   background-size: cover;
   background-image: url(../images/02-portfolio-1.jpg);
 }
 
-.Project2 {
+#Project2 {
   background-image: url(../images/02-portfolio-2.jpg);
   background-size: cover;
   grid-area: Project2;
 }
 
-.Project3 {
+#Project3 {
   background-size: cover;
   background-image: url(../images/02-portfolio-3.jpg);
   grid-area: Project3;
 }
 
-.Project4 {
+#Project4 {
   background-size: cover;
   background-image: url(../images/02-portfolio-4.jpg);
   grid-area: Project4;
 }
 
-#about {
-  display: flex;
-  justify-content: space-between;
+section {
+display: flex;
+background-color: gray;
+opacity: 0.8;
+border: 2px solid black;
+margin: 3px 3px;
 }
 
-#about h2 {
-  margin-right: 2in;
+main section {
+  margin: 5px 5px auto;
+  padding: 3px 3px;
+}
+
+main section h2 {
+  padding-right: 10px;
+  border-right: 4px solid black;
+}
+
+main section p {
+  padding: 7px;
 }
 
 #contact {
   display: block;
   padding: 10px;
-  background-color: gray;
-}
+} 
 
 @media only screen and (max-width: 600px){
   * {
     margin: 0;
+  }
+
+  .hero-banner h2 {
+    font-size: large;
   }
 }
